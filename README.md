@@ -81,7 +81,7 @@ zappa update dev
 ```
 
 Your updated Zappa deployment is live!:  
-https://rqefqjt8l4.execute-api.sa-east-1.amazonaws.com/dev
+https://**********.execute-api.sa-east-1.amazonaws.com/dev
 
 
 Check deployment logs:
