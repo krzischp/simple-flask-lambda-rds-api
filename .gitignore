@@ -131,3 +131,5 @@ dmypy.json
 # Others
 zappa_settings.json
 test.db
+.idea
+migrations

@@ -1,10 +1,8 @@
 # https://marshmallow.readthedocs.io/en/stable/_modules/marshmallow/fields.html
 # https://docs.sqlalchemy.org/en/13/core/type_basics.html
 
-from flask import Flask
-from marshmallow import Schema, fields, pre_load, validate
 from flask_sqlalchemy import SQLAlchemy
-
+from marshmallow import Schema, fields
 
 db = SQLAlchemy()
 
@@ -23,4 +21,4 @@ class Data(db.Model):
 
 class DataSchema(Schema):
     id = fields.Integer(dump_only=True)
-    notes = fields.Integer(required=True)
+    notes = fields.String(required=True)
