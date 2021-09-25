@@ -1,13 +1,12 @@
-```
-autopep8 --in-place --recursive .
-```
-
 # simple-flask-lambda-rds-api
 Simple flask lambda rds api
 
 Clone this repo to your local machine. In the top level directory, create a virtual environment:
 ```
 virtualenv venv
+```
+Activate it:
+```
 .\venv\Scripts\activate
 ```
 Now install the required modules:
@@ -61,4 +60,50 @@ And the tables are created.  Now you can launch the app:
 ```
 python app.py
 ```
-And point your browser to http://0.0.0.0:5000
+And point your browser to the link being displayed.
+
+# AWS
+
+## Zappa
+Step by step:  
+https://www.viget.com/articles/building-a-simple-api-with-amazon-lambda-and-zappa/
+
+Allows users to deploy code to **Lambda** with minimal configuration with just one command from the CLI.
+
+You can deploy your Zappa application by executing:
+```
+zappa deploy dev
+```
+
+After that, you can update your application code with:
+```
+zappa update dev
+```
+
+Your updated Zappa deployment is live!:  
+https://rqefqjt8l4.execute-api.sa-east-1.amazonaws.com/dev
+
+
+Check deployment logs:
+```
+zappa tail
+```
+
+Remove deployed resources
+```
+zappa undeploy dev
+```
+
+**Fix**  
+venv/Lib/site-packages/zappa/core.py at line 2137  
+change `add_description` by `set_description`
+## RDS
+Public Access: No
+RDS will not assign a public IP address to the database. Only Amazon EC2 instances and devices inside the VPC can connect to your database.
+
+https://sa-east-1.console.aws.amazon.com/rds/home?region=sa-east-1#databases:
+
+You first need to create testdb database in your AWS RDS test-db instance.
+```
+CREATE DATABASE testdb;
+```

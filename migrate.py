@@ -1,4 +1,4 @@
-from app import api_bp
+from run import api_bp
 from flask import Flask
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
