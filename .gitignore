@@ -133,3 +133,4 @@ zappa_settings.json
 test.db
 .idea
 migrations
+config.py
