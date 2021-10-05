@@ -153,3 +153,13 @@ pprint(result, indent=2)
 #   'release_date': '1971-12-17',
 #   'title': 'Hunky Dory'}
 ```
+
+
+# Who should use a serverless architecture?  
+Developers who want to decrease their go-to-market time and build lightweight, flexible applications that can be expanded or updated quickly may benefit greatly from serverless computing.
+
+Serverless architectures will reduce costs for applications that see inconsistent usage, with peak periods alternating with times of little to no traffic. For such applications, purchasing a server or a block of servers that are constantly running and always available, even when unused, may be a waste of resources. A serverless setup will respond instantly when needed and will not incur costs when at rest.
+
+Also, developers who want to push some or all of their application functions close to end users for reduced latency will require at least a partially serverless architecture, since doing so necessitates moving some processes out of the origin server.
+
+**ref**: https://www.cloudflare.com/fr-fr/learning/serverless/why-use-serverless/
