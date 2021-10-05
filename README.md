@@ -25,7 +25,7 @@ Run migrations initialization, using the db init command as follows:
 ```
 python migrate.py db init
 ```
-Create folder `migration` with `alembic.ini` file to edit before proceeding.  
+Creates folder `migration` with `alembic.ini` file to edit before proceeding.  
 
 Run the second script that populates the migration script with the detected changes in the models. 
 In this case, it is the first time we populate the migration script, and therefore, the
